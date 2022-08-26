@@ -1,0 +1,30 @@
+{
+  "name": "programic/laravel-fake-face",
+  "description": "Laravel package that uses thispersondoesnotexist.com and the fakeface api to generate fake faces.",
+  "type": "library",
+  "license": "MIT",
+  "readme": "README.md",
+  "autoload": {
+    "psr-4": {
+      "Programic\\FakeFace\\": "src/"
+    }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^7.4.5"
+  },
+  "authors": [
+    {
+      "name": "Programic",
+      "email": "development@programic.com",
+      "homepage": "https://programic.com",
+      "role": "Developer"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Programic\\FakeFace\\FakeFaceProvider"
+      ]
+    }
+  }
+}
