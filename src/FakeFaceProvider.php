@@ -11,8 +11,7 @@ class FakeFaceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->singleton(Generator::class, function () {
-            info(Config::get('app.faker_locale'));
-            $faker = Factory::create(Config::get('app.faker_locale'));
+            $faker = Factory::create($this->app['config']->get('app.faker_locale'));
             $faker->addProvider(new FakeFaceService());
             return $faker;
         });
